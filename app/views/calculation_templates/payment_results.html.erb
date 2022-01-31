@@ -2,16 +2,16 @@
 
 <dl>
   <dt>APR</dt>
-  <dd><%= @user_apr %>%</dd>
+  <dd><%= @user_apr.to_s(:percentage, { :precision => 4 } ) %></dd>
 
   <dt>Number of years</dt>
   <dd><%= @user_years %></dd>
 
   <dt>Principal</dt>
-  <dd>$<%= @user_principal %></dd>
+  <dd><%= @user_principal.to_s(:currency, { :precision => 2 }) %></dd>
 
   <dt>Payment</dt>
-  <dd><%= @payment %></dd>
+  <dd><%= @payment.to_s(:currency, { :precision => 2 }) %></dd>
 
 </dl>
 
